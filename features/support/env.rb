@@ -49,7 +49,7 @@ Spork.each_run do
   # See the DatabaseCleaner documentation for details. Example:
   #
   #   Before('@no-txn,@selenium,@culerity,@celerity,@javascript') do
-  #     # { :except => [:widgets] } may not do what you expect here
+  #     # { except: [:widgets] } may not do what you expect here
   #     # as tCucumber::Rails::Database.javascript_strategy overrides
   #     # this setting.
   #     DatabaseCleaner.strategy = :truncation
