@@ -1,3 +1,7 @@
-When /^I fill in "([^"]) with "([^"])$/ do |arg1, arg2|
-  fill_in arg1, with: arg2
+When /^I go to the home page$/ do
+  visit root_url
+end
+
+Then /^I should see "([^"]*)"$/ do |text|
+  page.has_content?(text).must_be true
 end

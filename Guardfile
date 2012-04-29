@@ -8,9 +8,10 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rspec_env => { 'RAIL
   watch(%r{^config/initializers/.+\.rb$})
   watch('Gemfile')
   watch('Gemfile.lock')
-  watch('spec/spec_helper.rb') { :rspec }
-  watch('test/test_helper.rb') { :test_unit }
-  watch(%r{features/support/}) { :cucumber }
+  watch('spec/spec_helper.rb')     { :rspec }
+  watch('test/test_helper.rb')     { :test_unit }
+  watch('test/minitest_helper.rb') { :minitest }
+  watch(%r{features/support/})     { :cucumber }
 end
 
 guard 'cucumber', cli: "--drb --format progress --no-profile", all_on_start: false, all_after_pass: false do
