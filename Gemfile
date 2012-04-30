@@ -49,7 +49,6 @@ group :test do
   gem 'guard-minitest'
   gem 'guard-pow'
   gem 'guard-spork'
-  gem 'rspec'
   gem 'spork'
   gem 'turn'
   gem 'vcr'

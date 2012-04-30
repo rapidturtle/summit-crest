@@ -3,5 +3,5 @@ When /^I go to the home page$/ do
 end
 
 Then /^I should see "([^"]*)"$/ do |text|
-  page.has_content?(text).must_be true
+  assert page.has_content?(text), "expected to see content '#{text}' in '#{page.body}'"
 end
