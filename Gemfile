@@ -40,14 +40,14 @@ gem 'capistrano-ext'
 
 # Test suite
 gem 'cucumber-rails', require: false, groups: [:development, :test]
-gem 'minitest-rails', groups: [:development, :test]
+gem 'rspec-rails', groups: [:development, :test]
 group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'guard-cucumber'
-  gem 'guard-minitest'
   gem 'guard-pow'
+  gem 'guard-rspec'
   gem 'guard-spork'
   gem 'spork'
   gem 'turn'
