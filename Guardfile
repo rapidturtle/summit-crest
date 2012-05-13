@@ -1,6 +1,6 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
-
+  
 guard 'spork', cucumber_env: { 'RAILS_ENV' => 'test' }, rspec_env: { 'RAILS_ENV' => 'test' } do
   watch('config/application.rb')
   watch('config/environment.rb')
@@ -13,18 +13,18 @@ guard 'spork', cucumber_env: { 'RAILS_ENV' => 'test' }, rspec_env: { 'RAILS_ENV'
   watch('test/test_helper.rb')     { :test_unit }
   watch(%r{features/support/})     { :cucumber }
 end
-
+  
 guard 'cucumber', cli: "--drb --format progress --no-profile", all_on_start: false, all_after_pass: false do
   watch(%r{^features/.+\.feature$})
   watch(%r{^features/support/.+$})                      { 'features' }
   watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
 end
-
+  
 guard 'rspec', version: 2, cli: "--drb -f d", run_all: { cli: "-f p" }, all_on_start: false, all_after_pass: false do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
-
+  
   # Rails example
   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
   watch(%r{^app/(.*)(\.erb|\.haml)$})                 { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
@@ -35,7 +35,7 @@ guard 'rspec', version: 2, cli: "--drb -f d", run_all: { cli: "-f p" }, all_on_s
   # Capybara request specs
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
-
+  
 guard 'pow' do
   watch('.powrc')
   watch('.powenv')
