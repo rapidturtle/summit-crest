@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>System Down</title>
+</head>
+<body>
+
+  <p>
+    The system is down for <%= reason ? reason : "maintenance" %>
+    as of <%= Time.now.strftime("%H:%M %Z") %>.
+  </p>
+  <p>
+    It'll be back <%= deadline ? deadline : "shortly" %>.
+  </p>
+
+</body>
+</html>
