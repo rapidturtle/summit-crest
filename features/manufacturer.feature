@@ -8,4 +8,4 @@ Feature: Manufacturer
     When I go to the home page
     Then I should see "Wavetronix"
 
-  Scenario: Add a new manufacturer
+  # Scenario: Add a new manufacturer
