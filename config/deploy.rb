@@ -35,12 +35,13 @@ namespace :deploy do
     run "mkdir -p #{shared_path}/config"
     run "mkdir -p #{shared_path}/public/uploads"
 
+    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    put File.read("config/nginx.example.conf"), "#{shared_path}/config/nginx.conf"
+    put File.read("config/unicorn_init.example.sh"), "#{shared_path}/config/unicorn_init.sh"
+
     sudo "ln -nfs #{shared_path}/config/nginx.conf /usr/local/nginx/sites-enabled/#{application}.conf"
     sudo "ln -nfs #{shared_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
 
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-    put File.read("config/unicorn_init.example.sh"), "#{shared_path}/config/unicorn_init.sh"
-    
     puts "Now edit the config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
