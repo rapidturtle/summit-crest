@@ -50,7 +50,6 @@ group :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'spork'
-  gem 'turn'
   gem 'vcr'
   gem 'webmock'
 end
