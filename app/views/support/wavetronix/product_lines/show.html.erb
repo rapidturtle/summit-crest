@@ -1,0 +1,6 @@
+<% title "Wavetronix #{@product_line.name} Support" %>
+
+<p>Which <%= @product_line.name %> product do you need help with?</p>
+<ul>
+	<%= render partial: "product", collection: @products %>
+</ul>

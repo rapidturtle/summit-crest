@@ -1,0 +1,10 @@
+/* ADMIN BAR */
+
+div#admin_bar {
+	background: transparent image-url('bkg_AdminBar.png') repeat-x;
+	height: 10px;
+//	margin-top: -10px;
+	position: fixed;
+	width: 100%;
+	& + * { margin-top: 10px; }
+}

@@ -1,0 +1,42 @@
+// Place all the styles related to the contact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin border-radius {
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.card {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	@include border-radius;
+	padding: 40px;
+	ul {
+		display: inline-block;
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 33%;
+		&:first-child {
+			background: transparent image-url('about_logo.png') -25px 50% no-repeat;
+			padding-left: 33%;
+		}
+	}
+	li {
+		margin-bottom: 20px;
+		&.address {
+			h3, p {
+				font-size: 13px;
+				line-height: 20px;
+				margin: 0;
+			}
+			h3 {
+				color: #333;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

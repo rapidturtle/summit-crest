@@ -9,25 +9,25 @@
 # Description:       Start, stop, restart unicorn server for a specific application.
 ### END INIT INFO
 set -e
- 
+
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/home/deploy/com.summit-crest.www/current
+APP_ROOT=/home/deploy/com.twincresttech.www/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
 AS_USER=deploy
 set -u
- 
+
 OLD_PIN="$PID.oldbin"
- 
+
 sig () {
   test -s "$PID" && kill -$1 `cat $PID`
 }
- 
+
 oldsig () {
   test -s $OLD_PIN && kill -$1 `cat $OLD_PIN`
 }
- 
+
 run () {
   if [ "$(id -un)" = "$AS_USER" ]; then
     eval $1
@@ -35,7 +35,7 @@ run () {
     su -c "$1" - $AS_USER
   fi
 }
- 
+
 case "$1" in
 start)
   sig 0 && echo >&2 "Already running" && exit 0
@@ -63,7 +63,7 @@ upgrade)
       printf '.' && sleep 1 && n=$(( $n - 1 ))
     done
     echo
- 
+
     if test $n -lt 0 && test -s $OLD_PIN
     then
       echo >&2 "$OLD_PIN still exists after $TIMEOUT seconds"

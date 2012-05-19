@@ -1,0 +1,4 @@
+<% title @download_type.name.pluralize %>
+<ul>
+	<%= render partial: "download", collection: @download_type.downloads.sort_by { |d| d.title } %>
+</ul>
