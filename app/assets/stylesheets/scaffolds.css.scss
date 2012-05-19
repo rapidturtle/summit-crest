@@ -6,15 +6,24 @@
 	border-radius: 6px;
 }
 
+@mixin box-shadow {
+	-moz-box-shadow: 0 2px 2px rgba(32, 32, 32, 0.5);
+	-webkit-box-shadow: 0 2px 2px rgba(32, 32, 32, 0.5);
+	box-shadow: 0 2px 2px rgba(32, 32, 32, 0.5);
+}
+
 
 /* DEFAULTS */
 
+html { position: relative; }
+
 body {
-  background: #eee image-url('bkg_Page.png') repeat-x;
+  // background: #eee image-url('bkg_Page.png') repeat-x;
+  background: #eee;
   color: #999;
   font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.75;
 }
 
 a {
@@ -77,69 +86,75 @@ img {
 /* SITE HEADER */
 
 header#site-header {
-	margin: 0 auto 16px auto;
-	width: 927px;
+	background: #999;
+	background: -moz-linear-gradient(top, #ccc 0%, #999 100%);
+	background: -webkit-linear-gradient(top, #ccc 0%, #999 100%);
+	background: linear-gradient(top, #ccc 0%, #999 100%);
+	border: 1px solid #666;
+	@include border-radius;
+	@include box-shadow;
+	margin: 20px auto;
+	overflow: hidden;
+	width: 900px;
 	h1 {
-		background: transparent image-url('banner_logo.png') 50% 50% no-repeat;
-		height: 107px;
+		color: #000;
+		display: inline-block;
+		float: left;
+		font-family: UbuntuMedium;
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 16px;
 		margin: 0;
-		padding: 0;
+		padding: 10px;
+		text-align: center;
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+		text-transform: uppercase;
+		width: 160px;
 	}
 	nav {
 		margin: 0 auto;
-		width: 903px;
+		width: 100%;
 		ul {
 			li {
-				color: #ddd;
+				color: #333;
 				float: left;
 				font-family: UbuntuMedium;
 				font-size: 12px;
 				line-height: 16px;
-				height: 16px;
-				padding: 8px 10px 14px 10px;
+				padding: 10px;
 				text-align: center;
-				text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+				text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 				text-transform: uppercase;
-				&:hover,
+				width: 160px;
+				&:hover {
+					background: #666;
+					background: -moz-linear-gradient(top, #999 0%, #666 100%);
+					background: -webkit-linear-gradient(top, #999 0%, #666 100%);
+					background: linear-gradient(top, #999 0%, #666 100%);
+					color: #fff;
+					text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+				}
 				&.selected {
-					color: #000;
-					text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+					background: #333;
+					background: -moz-linear-gradient(top, #333 0%, #666 100%);
+					background: -webkit-linear-gradient(top, #333 0%, #666 100%);
+					background: linear-gradient(top, #333 0%, #666 100%);
+					-webkit-box-shadow: inset 0px 3px 6px -1px rgba(0, 0, 0, 0.5);
+          -moz-box-shadow: inset 0px 3px 6px -1px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 3px 6px -1px rgba(0, 0, 0, 0.5);color: #ddd;
+					text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+					a:hover { color: #eee; }
 				}
 				a {
 					color: inherit;
 					display: block;
-					height: inherit;
 					width: inherit;
-					margin: -8px -10px -14px -10px;
+					margin: -10px;
 					padding: inherit;
 					text-decoration: none;
 					&:hover {
-						color: #000;
+						color: inherit;
 					}
-				}
-				&#nav-button-1 {
-					background: transparent image-url('bkg_Navigation.png') 0 0 no-repeat;
-					width: 206px;
-					&:hover,
-					&.selected { background: transparent image-url('bkg_Navigation.png') 0 -39px no-repeat; }
-				}
-				&#nav-button-2 {
-					background: transparent image-url('bkg_Navigation.png') -226px 0 no-repeat;
-					width: 206px;
-					&:hover,
-					&.selected { background: transparent image-url('bkg_Navigation.png') -226px -39px no-repeat; }
-				}
-				&#nav-button-3 {
-					background: transparent image-url('bkg_Navigation.png') -452px 0 no-repeat;
-					width: 205px;
-					&:hover,
-					&.selected { background: transparent image-url('bkg_Navigation.png') -452px -39px no-repeat; }
-				}
-				&#nav-button-4 {
-					background: transparent image-url('bkg_Navigation.png') -677px 0 no-repeat;
-					width: 206px;
-					&:hover,
-					&.selected { background: transparent image-url('bkg_Navigation.png') -677px -39px no-repeat; }
 				}
 			}
 		}
@@ -151,8 +166,9 @@ header#site-header {
 
 #main {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #666;
 	@include border-radius;
+	@include box-shadow;
 	margin: 0 auto 20px auto;
 	padding: 50px;
 	min-height: 500px;
@@ -204,7 +220,8 @@ header#site-header {
 	}
 	
 	input, select, textarea {
-	  font-family: UbuntuRegular, verdana, arial, helvetica, sans-serif;
+	  font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
+	  line-height: 1.5;
 	}
 
 	pre {
@@ -236,10 +253,10 @@ footer#site-footer {
 	padding: 0;
 	width: 900px;
 	#copyright {
-		background: transparent image-url('footer_logo.png') 0 50% no-repeat;
+		// background: transparent image-url('footer_logo.png') 0 50% no-repeat;
 		display: inline-block;
 		margin: 0;
-		padding-left: 30px;
+		// padding-left: 30px;
 	}
 	nav {
 		float: right;

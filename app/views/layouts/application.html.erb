@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>SummitCrest<%= content_for?(:title) ? " | #{yield :title}" : "" %></title>
+		<title>SummitCrest<%= content_for?(:title) ? " - #{yield :title}" : "" %></title>
 		<meta name="description" content="">
 		<meta name="author" content="Rapid Turtle">
 		
@@ -32,22 +32,24 @@
 		<% end %>
 		
 		<header id="site-header">
-			<h1 class="ir">SummitCrest</h1>
+			<h1>SummitCrest</h1>
 			<nav>
 				<ul class="clearfix">
-					<%= tab_to "Manufacturers", root_path, id: "nav-button-1", match: ['manufacturers'] %>
-					<%= tab_to "Support", support_root_path, id: "nav-button-2", match: ['support'] %>
-					<%= tab_to "About", about_path, id: "nav-button-3", match: ['about'] %>
-					<%= tab_to "Contact", contact_path, id: "nav-button-4", match: ['contact'] %>
+					<%= tab_to "Manufacturers", root_path, match: ['manufacturers'] %>
+					<%= tab_to "Support", support_root_path, match: ['support'] %>
+					<%= tab_to "About", about_path, match: ['about'] %>
+					<%= tab_to "Contact", contact_path, match: ['contact'] %>
 				</ul>
 			</nav>
 		</header>
+
 		<div id="main" role="main">
 			<% if show_title? %>
 			<h1 id="title"><%= yield :title %></h1>
 			<% end %>
 			<%= yield %>
 		</div>
+
 		<footer id="site-footer">
 			<nav>
 				<ul>
@@ -61,13 +63,13 @@
 					<% end %>
 				</ul>
 			</nav>
-			<p id="copyright">&copy; 2008&ndash;<%= Time.now.year %> SummitCrest, Inc. All rights reserved.</p>
+			<p id="copyright">&copy; <%= Time.now.year %> SummitCrest, LLC. All rights reserved.</p>
 		</footer>
 	
 		<%= javascript_include_tag "application" %>
 	
 		<script>
-			var _gaq=[['_setAccount','UA-27111778-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
 			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)}(document,'script'));
