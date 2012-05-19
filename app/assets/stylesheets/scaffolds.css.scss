@@ -12,7 +12,7 @@
 body {
   background: #eee image-url('bkg_Page.png') repeat-x;
   color: #999;
-  font-family: UbuntuRegular, verdana, arial, helvetica, sans-serif;
+  font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 21px;
 }
@@ -184,7 +184,6 @@ header#site-header {
 		margin: -50px -50px 50px -50px;
 		padding: 20px;
 		text-transform: uppercase;
-		&:after { color: #fc0; content: " ||";}
 		& + img.across {
 			margin-top: -50px;
 			margin-bottom: 20px;
