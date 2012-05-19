@@ -15,8 +15,6 @@
 
 /* DEFAULTS */
 
-html { position: relative; }
-
 body {
   // background: #eee image-url('bkg_Page.png') repeat-x;
   background: #eee;
@@ -100,9 +98,8 @@ header#site-header {
 		color: #000;
 		display: inline-block;
 		float: left;
-		font-family: UbuntuMedium;
+		font-family: Ubuntu;
 		font-size: 12px;
-		font-weight: normal;
 		line-height: 16px;
 		margin: 0;
 		padding: 10px;
