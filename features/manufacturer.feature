@@ -8,4 +8,17 @@ Feature: Manufacturer
     When I go to the home page
     Then I should see "Wavetronix"
 
-  # Scenario: Add a new manufacturer
+  Scenario: Add a new manufacturer
+    Given I go to the new manufacturer page
+    And I fill in "Name" with "3M"
+    And I fill in "Description" with "3M description."
+    When I press "Create"
+    Then I should be on the manufacturer page
+    And I should see "3M"
+
+  Scenario: Invalid manufacturer should render new template
+    Given I go to the new manufacturer page
+    And I fill in "Name" with "3M"
+    And I fill in "Description" with ""
+    When I press "Create"
+    Then I should be on the new manufacturer page
