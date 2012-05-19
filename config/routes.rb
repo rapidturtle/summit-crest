@@ -1,14 +1,4 @@
 SummitCrest::Application.routes.draw do
-  get "download_types/show"
-
-  get "products/show"
-
-  get "product_lines/index"
-
-  get "product_lines/show"
-
-  get "base/index"
-
   # Root
   root to: 'manufacturers#index'
   
@@ -32,16 +22,6 @@ SummitCrest::Application.routes.draw do
   
   # Support
   namespace :support do
-    namespace :wavetronix do
-      resources :download_types do
-        post 'choose', on: :collection
-      end
-      resources :product_lines do
-        post 'choose', on: :collection
-        resources :products
-      end
-      root to: 'base#index'
-    end
     root to: 'base#index'
   end
 end
