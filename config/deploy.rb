@@ -13,7 +13,7 @@ require 'bundler/capistrano'
 set :use_sudo, false
 
 # application details
-set :application, "com.twincresttech.www"
+set :application, "com.summit-crest.www"
 set :domain,      "ve.eyequeue.us"
 
 # repository elsewhere

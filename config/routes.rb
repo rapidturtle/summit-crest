@@ -1,4 +1,4 @@
-Twincrest::Application.routes.draw do
+SummitCrest::Application.routes.draw do
   get "download_types/show"
 
   get "products/show"
