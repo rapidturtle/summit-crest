@@ -1,3 +1,7 @@
+// SASS VARIABLES
+
+$blue: #005ca9;
+
 // SASS MIXINS
 
 @mixin border-radius {
@@ -95,6 +99,7 @@ header#site-header {
   overflow: hidden;
   width: 900px;
   h1 {
+    background: transparent image-url('banner_logo.png') no-repeat 50% 50%;
     color: #000;
     display: inline-block;
     float: left;
@@ -197,6 +202,10 @@ header#site-header {
     margin: -50px -50px 50px -50px;
     padding: 20px;
     text-transform: uppercase;
+    &:after {
+      color: $blue;
+      content: " //";
+    }
     & + img.across {
       margin-top: -50px;
       margin-bottom: 20px;
@@ -228,10 +237,10 @@ header#site-header {
   }
 
   a {
-    color: #069;
+    color: $blue;
     text-decoration: none;
     &:visited {
-      color: #609;
+      color: #5c00a9;
     }
     &:hover {
       text-decoration: underline;
@@ -269,10 +278,10 @@ footer#site-footer {
     }
   }
   #copyright {
-    // background: transparent image-url('footer_logo.png') 0 50% no-repeat;
+    background: transparent image-url('footer_logo.png') 0 50% no-repeat;
     display: inline-block;
     margin: 0;
-    // padding-left: 30px;
+    padding-left: 40px;
   }
   #social-media-links { text-align: center; }
 }
