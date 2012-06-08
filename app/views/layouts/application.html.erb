@@ -35,7 +35,7 @@
       <h1 class="ir">SummitCrest</h1>
       <nav>
         <ul class="clearfix">
-          <%= tab_to "Manufacturers", root_path, match: ['manufacturers'] %>
+          <%= tab_to "Home", root_path, match: ['home'] %>
           <%= tab_to "Support", support_root_path, match: ['support'] %>
           <%= tab_to "About", about_path, match: ['about'] %>
           <%= tab_to "Contact", contact_path, match: ['contact'] %>
@@ -51,19 +51,8 @@
     </div>
 
     <footer id="site-footer">
-      <nav>
-        <ul>
-          <li><%= link_to 'About Us', about_path %></li>
-          <li><%= link_to 'Contact Us', contact_path %></li>
-          <% if current_user %>
-          <li><%= link_to 'Users', users_path %></li>
-          <li><%= link_to 'Sign out', sign_out_path %></li>
-          <% else %>
-          <li><%= link_to 'Sign in', sign_in_path %></li>
-          <% end %>
-        </ul>
-      </nav>
-      <p id="copyright">&copy; <%= Time.now.year %> SummitCrest, LLC. All rights reserved.</p>
+      <p id="copyright">&copy; <%= Time.now.year %> SummitCrest, LLC. All rights reserved. Wavetronix, SmartSensor, Click, Command, and all associated product names and logos are trademarks of Wavetronix LLC.</p>
+      <%= link_to "Wavetronix", "http://www.wavetronix.com/", id: "distributor-logo", class: "ir" %>
       <p id="social-media-buttons"><g:plusone size="small"></g:plusone></p>
     </footer>
   

@@ -120,8 +120,9 @@ header#site-header {
       li {
         color: #333;
         float: left;
-        font-family: UbuntuMedium;
+        font-family: Ubuntu;
         font-size: 12px;
+        font-weight: 500;
         line-height: 16px;
         padding: 10px;
         text-align: center;
@@ -278,10 +279,17 @@ footer#site-footer {
     }
   }
   #copyright {
-    background: transparent image-url('footer_logo.png') 0 50% no-repeat;
+    background: transparent image-url('footer_logo.png') 0 0 no-repeat;
     display: inline-block;
     margin: 0;
     padding-left: 40px;
+  }
+  #distributor-logo {
+    background: transparent image-url('logo_WavetronixDistributor.png') no-repeat 50% 50%;
+    display: block;
+    height: 48px;
+    width: 144px;
+    margin: 12px auto;
   }
   #social-media-links { text-align: center; }
 }
