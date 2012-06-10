@@ -22,7 +22,7 @@ $blue: #005ca9;
 body {
   // background: #eee image-url('bkg_Page.png') repeat-x;
   background: #eee;
-  color: #999;
+  color: #666;
   font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.75;
@@ -120,8 +120,9 @@ header#site-header {
       li {
         color: #333;
         float: left;
-        font-family: UbuntuMedium;
+        font-family: Ubuntu;
         font-size: 12px;
+        font-weight: 500;
         line-height: 16px;
         padding: 10px;
         text-align: center;
@@ -246,13 +247,20 @@ header#site-header {
       text-decoration: underline;
     }
   }
+
   *:last-child { margin-bottom: 0; }
+
+  .logo {
+    background: transparent image-url('logo_Wavetronix.png') no-repeat 0 -23px;
+    padding-left: 425px;
+  }
 }
 
 
 /* SITE FOOTER */
 
 footer#site-footer {
+  color: #999;
   font-size: 12px;
   line-height: 24px;
   margin: 0 auto 40px auto;
@@ -278,14 +286,20 @@ footer#site-footer {
     }
   }
   #copyright {
-    background: transparent image-url('footer_logo.png') 0 50% no-repeat;
+    background: transparent image-url('footer_logo.png') 0 0 no-repeat;
     display: inline-block;
     margin: 0;
     padding-left: 40px;
   }
+  #distributor-logo {
+    background: transparent image-url('logo_WavetronixDistributor.png') no-repeat 50% 50%;
+    display: block;
+    height: 48px;
+    width: 144px;
+    margin: 12px auto;
+  }
   #social-media-links { text-align: center; }
 }
-
 
 div {
   &.field, &.actions {
@@ -326,4 +340,3 @@ div {
     list-style: square;
   }
 }
-

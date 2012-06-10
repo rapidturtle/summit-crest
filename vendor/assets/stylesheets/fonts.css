@@ -35,19 +35,19 @@
 }
 
 @font-face {
-    font-family: 'UbuntuMedium';
+    font-family: 'Ubuntu';
     src: url('Ubuntu-M-webfont.eot');
     src: url('Ubuntu-M-webfont.eot?#iefix') format('embedded-opentype'),
          url('Ubuntu-M-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'UbuntuMedium';
+    font-family: 'Ubuntu';
     src: url('Ubuntu-MI-webfont.eot');
     src: url('Ubuntu-MI-webfont.eot?#iefix') format('embedded-opentype'),
          url('Ubuntu-MI-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 500;
     font-style: italic;
 }

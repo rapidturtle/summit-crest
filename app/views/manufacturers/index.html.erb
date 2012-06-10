@@ -1,8 +1,0 @@
-<% title "Manufacturers" %>
-
-<%= image_tag "hero_Manufacturers.jpg", alt: "road sign", class: "across" %>
-<div id="manufacturers" class="clearfix" data-update-url="<%= sort_manufacturers_path %>">
-	<%= render @manufacturers %>
-</div>
-
-<p><%= link_to 'New Manufacturer', new_manufacturer_path if current_user %></p>
