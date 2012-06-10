@@ -25,7 +25,7 @@ private
   def authenticate_if_staging
     if request.domain == "rapidturtle.com"
       authenticate_or_request_with_http_basic do |name, password|
-        name == 'twincrest' && password == 'twincrest'
+        name == 'summitcrest' && password == 'summitcrest'
       end
     end
   end

@@ -31,20 +31,20 @@ namespace :deploy do
     end
   end
   
-  task :setup_config, roles: :app do
-    run "mkdir -p #{shared_path}/config"
-    run "mkdir -p #{shared_path}/public/uploads"
+  # task :setup_config, roles: :app do
+  #   run "mkdir -p #{shared_path}/config"
+  #   run "mkdir -p #{shared_path}/public/uploads"
 
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-    put File.read("config/nginx.example.conf"), "#{shared_path}/config/nginx.conf"
-    put File.read("config/unicorn_init.example.sh"), "#{shared_path}/config/unicorn_init.sh"
+  #   put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+  #   put File.read("config/nginx.example.conf"), "#{shared_path}/config/nginx.conf"
+  #   put File.read("config/unicorn_init.example.sh"), "#{shared_path}/config/unicorn_init.sh"
 
-    sudo "ln -nfs #{shared_path}/config/nginx.conf /usr/local/nginx/sites-enabled/#{application}.conf"
-    sudo "ln -nfs #{shared_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+  #   sudo "ln -nfs #{shared_path}/config/nginx.conf /usr/local/nginx/sites-enabled/#{application}.conf"
+  #   sudo "ln -nfs #{shared_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
 
-    puts "Now edit the config files in #{shared_path}."
-  end
-  after "deploy:setup", "deploy:setup_config"
+  #   puts "Now edit the config files in #{shared_path}."
+  # end
+  # after "deploy:setup", "deploy:setup_config"
   
   namespace :config do
     desc "Create symlink to shared files and folders on each release."
@@ -55,7 +55,7 @@ namespace :deploy do
   end
 
   namespace :web do
-    task :disable, :roles => :web, :except => { :no_release => true } do
+    task :disable, roles: :web, except: { no_release: true } do
       require 'erb'
       on_rollback { run "rm #{shared_path}/system/maintenance.html" }
 
@@ -65,10 +65,10 @@ namespace :deploy do
       template = File.read("./app/views/layouts/maintenance.html.erb")
       result = ERB.new(template).result(binding)
 
-      put result, "#{shared_path}/system/maintenance.html", :mode => 0644
+      put result, "#{shared_path}/system/maintenance.html", mode: 0644
     end
   end
    
-  after "deploy:finalize_update", "deploy:config:symlink"
+  # after "deploy:finalize_update", "deploy:config:symlink"
   after "deploy:restart", "deploy:cleanup"
 end
