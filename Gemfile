@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jquery-rails'
-gem 'rails', '3.2.5'
+gem 'rails', '3.2.6'
 
 gem 'unicorn', groups: [:staging, :production]
 
