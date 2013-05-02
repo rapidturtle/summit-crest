@@ -10,6 +10,11 @@ SummitCrest::Application.routes.draw do
   post "contact/send_message"
   get "contact/thank_you"
   
+  # Products
+  namespace :products do
+    root to: 'base#index'
+  end
+
   # Support
   namespace :support do
     root to: 'base#index'

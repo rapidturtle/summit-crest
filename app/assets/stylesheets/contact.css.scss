@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@mixin border-radius {
+@mixin default-border-radius {
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
@@ -11,7 +11,7 @@
 .card {
 	background-color: #eee;
 	border: 1px solid #ccc;
-	@include border-radius;
+	@include default-border-radius;
 	padding: 40px;
 	ul {
 		display: inline-block;
