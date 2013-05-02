@@ -5,10 +5,10 @@
 #main {
   overflow: auto;
   #wavetronix-logo {
-    background: transparent image-url('logo_Wavetronix.png') no-repeat 50% 50%;
+    background: transparent image-url('logo_Wavetronix.png') no-repeat -20px -8px;
     display: block;
     float: left;
-    height: 94px;
+    height: 171px;
     width: 400px;
     & + div {
       float: right;
