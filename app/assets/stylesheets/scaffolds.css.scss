@@ -187,6 +187,16 @@ header#site-header {
     -moz-column-rule: 1px dotted #ccc;
     -webkit-column-rule: 1px dotted #ccc;
     column-rule: 1px dotted #ccc;
+    margin-bottom: 20px;
+    padding: 0;
+    h2 {
+      -moz-column-span: all;
+      -webkit-column-span: all;
+      column-span: all;
+    }
+    h2 + p, p:first-child {
+      margin-top: 0;
+    }
   }
 
   h1#title {
@@ -222,6 +232,7 @@ header#site-header {
     border-top: 1px dotted #ccc;
     color: #333;
     font-size: 16px;
+    line-height: 1.2;
     margin-top: 20px;
     padding-top: 20px;
   }
