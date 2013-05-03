@@ -237,6 +237,12 @@ header#site-header {
     padding-top: 20px;
   }
 
+  h3 {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
   input, select, textarea {
     font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
     line-height: 1.5;
@@ -297,12 +303,22 @@ footer#site-footer {
     margin: 0;
     padding-left: 40px;
   }
-  #distributor-logo {
-    background: transparent image-url('logo_WavetronixDistributor.png') no-repeat 50% 50%;
-    display: block;
-    height: 48px;
-    width: 144px;
-    margin: 12px auto;
+  .badges {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+    #distributor-badge {
+      background: transparent image-url('badge_WavetronixDistributor.png') no-repeat 50% 50%;
+      display: inline-block;
+      height: 72px;
+      width: 168px;
+    }
+    #gltei-badge {
+      background: transparent image-url('badge_GLTEI.png') no-repeat 50% 50%;
+      display: inline-block;
+      height: 72px;
+      width: 72px;
+    }
   }
   #social-media-links { text-align: center; }
 }

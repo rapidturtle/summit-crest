@@ -51,9 +51,11 @@
     </div>
 
     <footer id="site-footer">
-      <p id="copyright">&copy; <%= Time.now.year %> SummitCrest, LLC. All rights reserved. Wavetronix, SmartSensor, Click, Command, and all associated product names and logos are trademarks of Wavetronix LLC.</p>
-      <%= link_to "Wavetronix", "http://www.wavetronix.com/en", id: "distributor-logo", class: "ir" %>
-      <p id="social-media-buttons"><g:plusone size="small"></g:plusone></p>
+      <p id="copyright">&copy; 2012 &ndash; <%= Time.now.year %> SummitCrest, LLC. All rights reserved. Wavetronix, SmartSensor, Click, Command, and all associated product names and logos are trademarks of Wavetronix LLC.</p>
+      <div class="badges">
+        <%= link_to "Wavetronix", "http://www.wavetronix.com/en", id: "distributor-badge", class: "ir", target: "_blank" %>
+        <%= link_to "GLTEI", "http://www.greatlakestransportation.org", id: "gltei-badge", class: "ir", target: "_blank" %>
+      </div>
     </footer>
 
     <%= javascript_include_tag "application" %>
