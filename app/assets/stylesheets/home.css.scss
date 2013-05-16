@@ -1,3 +1,18 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main {
+  overflow: auto;
+  #distributor-logo {
+    background: transparent image-url('logo_WavetronixDistributor.png') no-repeat -20px -8px;
+    display: block;
+    float: left;
+    height: 171px;
+    width: 400px;
+    & + div {
+      float: right;
+      width: 400px;
+    }
+  }
+}

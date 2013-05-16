@@ -4,13 +4,13 @@ $blue: #005ca9;
 
 // SASS MIXINS
 
-@mixin border-radius {
+@mixin default-border-radius {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
-@mixin box-shadow {
+@mixin default-box-shadow {
   -moz-box-shadow: 0 2px 2px rgba(32, 32, 32, 0.5);
   -webkit-box-shadow: 0 2px 2px rgba(32, 32, 32, 0.5);
   box-shadow: 0 2px 2px rgba(32, 32, 32, 0.5);
@@ -55,7 +55,7 @@ img {
 #error, #notice, #alert {
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid black;
-  @include border-radius;
+  @include default-border-radius;
   -moz-box-shadow: 0 10px 20px rgba(32, 32, 32, 0.5);
   -webkit-box-shadow: 0 10px 20px rgba(32, 32, 32, 0.5);
   box-shadow: 0 10px 20px rgba(32, 32, 32, 0.5);
@@ -74,7 +74,7 @@ img {
   a.button {
     background-color: #333;
     border: 1px solid #666;
-    @include border-radius;
+    @include default-border-radius;
     color: #999;
     padding: 6px 12px;
     text-decoration: none;
@@ -93,8 +93,8 @@ header#site-header {
   background: -webkit-linear-gradient(top, #ccc 0%, #999 100%);
   background: linear-gradient(top, #ccc 0%, #999 100%);
   border: 1px solid #666;
-  @include border-radius;
-  @include box-shadow;
+  @include default-border-radius;
+  @include default-box-shadow;
   margin: 20px auto;
   overflow: hidden;
   width: 900px;
@@ -170,13 +170,13 @@ header#site-header {
 #main {
   background: #fff;
   border: 1px solid #666;
-  @include border-radius;
-  @include box-shadow;
+  @include default-border-radius;
+  @include default-box-shadow;
   margin: 0 auto 20px auto;
   padding: 50px;
   min-height: 500px;
   width: 800px;
-  
+
   section {
     -moz-column-count: 2;
     -webkit-column-count: 2;
@@ -187,8 +187,18 @@ header#site-header {
     -moz-column-rule: 1px dotted #ccc;
     -webkit-column-rule: 1px dotted #ccc;
     column-rule: 1px dotted #ccc;
+    margin-bottom: 20px;
+    padding: 0;
+    h2 {
+      -moz-column-span: all;
+      -webkit-column-span: all;
+      column-span: all;
+    }
+    h2 + p, p:first-child {
+      margin-top: 0;
+    }
   }
-  
+
   h1#title {
     background: #000;
     -webkit-border-top-left-radius: 6px;
@@ -217,15 +227,22 @@ header#site-header {
       }
     }
   }
-  
+
   h2 {
     border-top: 1px dotted #ccc;
     color: #333;
     font-size: 16px;
+    line-height: 1.2;
     margin-top: 20px;
     padding-top: 20px;
   }
-  
+
+  h3 {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
   input, select, textarea {
     font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
     line-height: 1.5;
@@ -249,11 +266,6 @@ header#site-header {
   }
 
   *:last-child { margin-bottom: 0; }
-
-  .logo {
-    background: transparent image-url('logo_Wavetronix.png') no-repeat 0 -23px;
-    padding-left: 425px;
-  }
 }
 
 
@@ -291,12 +303,22 @@ footer#site-footer {
     margin: 0;
     padding-left: 40px;
   }
-  #distributor-logo {
-    background: transparent image-url('logo_WavetronixDistributor.png') no-repeat 50% 50%;
-    display: block;
-    height: 48px;
-    width: 144px;
-    margin: 12px auto;
+  .badges {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+    #distributor-badge {
+      background: transparent image-url('badge_WavetronixDistributor.png') no-repeat 50% 50%;
+      display: inline-block;
+      height: 72px;
+      width: 168px;
+    }
+    #gltei-badge {
+      background: transparent image-url('badge_GLTEI.png') no-repeat 50% 50%;
+      display: inline-block;
+      height: 72px;
+      width: 72px;
+    }
   }
   #social-media-links { text-align: center; }
 }
