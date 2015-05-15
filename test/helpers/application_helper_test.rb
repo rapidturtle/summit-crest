@@ -11,7 +11,7 @@ describe ApplicationHelper do
     end
 
     it "formats a title with an argument" do
-      full_title("About Us").must_equal "SummitCrest | About Us"
+      full_title("About Us").must_equal "SummitCrest / About Us"
     end
   end
 end
