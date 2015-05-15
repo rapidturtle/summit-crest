@@ -11,16 +11,3 @@
     font-size: 0.8rem;
   }
 }
-
-.site-footer-links {
-  @include inline-list();
-  display: inline-block;
-
-  a {
-    color: inherit;
-
-    &:hover {
-      color: scale-color($aluminum, $lightness: -40%)
-    }
-  }
-}

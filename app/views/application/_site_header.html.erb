@@ -17,19 +17,19 @@
         <% end %>
       </li>
       <li>
-        <%= link_to nil do %>
+        <%= link_to support_path do %>
           <%= content_tag :span, nil, class: "fa fa-fw fa-life-ring" %>
           Support
         <% end %>
       </li>
       <li>
-        <%= link_to nil do %>
+        <%= link_to about_path do %>
           <%= content_tag :span, nil, class: "fa fa-fw fa-info-circle" %>
           About Us
         <% end %>
       </li>
       <li>
-        <%= link_to nil do %>
+        <%= link_to contact_path do %>
           <%= content_tag :span, nil, class: "fa fa-fw fa-comment" %>
           Contact Us
         <% end %>
@@ -51,13 +51,13 @@
             <%= link_to "Home", root_path %>
           </li>
           <li class="<%= :active if params[:action] == "support" %>">
-            <%= link_to "Support", nil %>
+            <%= link_to "Support", support_path %>
           </li>
           <li class="<%= :active if params[:action] == "about" %>">
-            <%= link_to "About", nil %>
+            <%= link_to "About", about_path %>
           </li>
           <li class="<%= :active if params[:action] == "contact" %>">
-            <%= link_to "Contact", nil %>
+            <%= link_to "Contact", contact_path %>
           </li>
         </ul>
       </section>
