@@ -1,13 +1,13 @@
 <footer class="site-footer">
   <div class="row">
-    <div class="medium-6 columns">
-      <p>&copy; 2013&ndash;<%= Time.now.year %> SummitCrest, LLC. All rights reserved.</p>
-    </div>
-    <div class="medium-6 columns text-right">
-      <ul class="site-footer-links">
-        <li><%= link_to "About Us", nil %></li>
-        <li><%= link_to "Contact Us", nil %></li>
-      </ul>
-    </div>
+    <p>&copy; 2012&ndash;<%= Time.now.year %> SummitCrest, LLC. All rights reserved. Wavetronix, SmartSensor, Click, Command, and all associated product names and logos are trademarks of Wavetronix LLC.</p>
+    <p class="text-center">
+      <%= link_to "http://www.wavetronix.com", target: "_blank" do %>
+        <%= image_tag "badge_WavetronixDistributor.png", alt: "Wavetronix Distributor" %>
+      <% end %>
+      <%= link_to "http://www.greatlakestransportation.org", target: "_blank" do %>
+        <%= image_tag "badge_GLTEI.png", alt: "GLTEI" %>
+      <% end %>
+    </p>
   </div>
 </footer>
