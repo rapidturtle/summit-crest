@@ -1,16 +1,18 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-/.bundle
-/.sass-cache
-/config/application.yml
-/config/aws.yml
-/config/database.yml
-/config/initializers/secret_token.rb
-/config/secrets.yml
-/config/unicorn_init.sh
-/db/*.sqlite3
+/coverage
 /log
-/public/assets
+/tmp
 /public/system
 /public/uploads
-/tmp
+**.orig
+
+config/database.yml
+
+## Environment normalization:
+/.bundle
 /vendor/bundle
+
+# these should all be checked in to normalize the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# Ignore pow environment settings
+.powenv

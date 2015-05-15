@@ -1,5 +1,0 @@
-<% if manufacturer.support_site.present? %>
-	<%= content_tag_for :div, manufacturer do %>
-		<%= link_to manufacturer.name, manufacturer.support_site, style: "background: transparent url('#{manufacturer.image_url(:thumb).to_s}') 50% 50% no-repeat", class: "#{manufacturer.image_url.present? ? 'ir' : '' }", target: "_blank" %>
-	<% end %>
-<% end %>
