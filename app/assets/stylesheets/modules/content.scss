@@ -1,6 +1,8 @@
 @import "foundation_and_overrides";
 @import "globals/all";
 
+$content-padding: rem-calc(50);
+
 .content {
   @include panel(
     $bg: $white
@@ -8,16 +10,16 @@
   border-radius: $global-radius;
   margin-top: $global-vertical-spacing;
   overflow: hidden;
-  padding: 0 $panel-padding $panel-padding $panel-padding !important;
+  padding: 0 $content-padding $content-padding $content-padding !important;
 
   header {
     background-color: $oil;
-    margin-bottom: $panel-padding;
+    margin-bottom: $content-padding;
     text-transform: uppercase;
 
     &.page-header {
-      margin-left: -$panel-padding;
-      margin-right: -$panel-padding;
+      margin-left: -$content-padding;
+      margin-right: -$content-padding;
       margin-top: rem-calc(-3);
     }
 
