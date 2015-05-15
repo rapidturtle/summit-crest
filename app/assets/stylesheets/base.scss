@@ -1,0 +1,26 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "foundation_and_overrides";
+@import "globals/all";
+
+.site-footer {
+  color: $aluminum;
+
+  li,
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.site-footer-links {
+  @include inline-list();
+  display: inline-block;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: scale-color($aluminum, $lightness: -40%)
+    }
+  }
+}

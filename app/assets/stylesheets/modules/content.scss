@@ -1,0 +1,35 @@
+@import "foundation_and_overrides";
+@import "globals/all";
+
+.content {
+  @include panel(
+    $bg: $white
+  );
+  border-radius: $global-radius;
+  margin-top: $global-vertical-spacing;
+  overflow: hidden;
+  padding: 0 $panel-padding $panel-padding $panel-padding !important;
+
+  header {
+    background-color: $oil;
+    margin-bottom: $panel-padding;
+    text-transform: uppercase;
+
+    &.page-header {
+      margin-left: -$panel-padding;
+      margin-right: -$panel-padding;
+      margin-top: rem-calc(-3);
+    }
+
+    h1 {
+      color: $white;
+      margin-bottom: 0;
+      padding: $panel-padding;
+
+      &::after {
+        color: $primary-color;
+        content: " //"
+      }
+    }
+  }
+}

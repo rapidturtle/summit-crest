@@ -1,0 +1,12 @@
+@import "foundation_and_overrides";
+@import "globals/all";
+
+$text-columns: 2 3;
+
+@each $text-column in $text-columns {
+  .text-columns-#{$text-column} {
+    column-count: $text_column;
+    -moz-column-count: $text_column;
+    -webkit-column-count: $text_column;
+  }
+}
