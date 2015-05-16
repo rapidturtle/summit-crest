@@ -30,7 +30,7 @@ $content-padding: rem-calc(50);
 
       &::after {
         color: $primary-color;
-        content: " //"
+        content: " //";
       }
     }
   }
