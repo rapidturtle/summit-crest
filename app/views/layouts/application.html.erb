@@ -6,7 +6,7 @@
 
     <title><%= full_title yield(:title) %></title>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500,300italic,500italic' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -19,14 +19,14 @@
         <%= render "site_header" %>
         <main role="main">
           <div class="row">
-            <div class="medium-12 columns content">
+            <div class="small-12 columns content">
               <%= yield %>
             </div>
           </div>
         </main>
         <%= render "site_footer" %>
         <%= content_tag :div, class: "row" do %>
-          <%= content_tag :div, class: "medium-12 columns panel radius" do %>
+          <%= content_tag :div, class: "small-12 columns panel radius" do %>
             <%= debug params %>
           <% end %>
         <% end if Rails.env == "development" %>

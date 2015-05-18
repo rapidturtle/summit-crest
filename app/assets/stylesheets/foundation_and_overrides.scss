@@ -87,13 +87,13 @@ $row-width: rem-calc(900);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Open Sans", sans-serif;
+$font-family-sans-serif: Ubuntu, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
 $font-weight-normal: 300;
-$font-weight-bold: 600;
+$font-weight-bold: 500;
 
 $white       : #ffffff;
 $ghost       : #fafafa;
@@ -211,7 +211,7 @@ $global-radius: 5px;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-$header-font-weight: $font-weight-bold;
+// $header-font-weight: $font-weight-bold;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;
@@ -220,10 +220,10 @@ $header-font-weight: $font-weight-bold;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(26);
-$h2-font-size: rem-calc(24);
-$h3-font-size: rem-calc(22);
-$h4-font-size: rem-calc(20);
+$h1-font-size: rem-calc(34);
+$h2-font-size: rem-calc(30);
+$h3-font-size: rem-calc(26);
+$h4-font-size: rem-calc(22);
 $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 

@@ -3,6 +3,11 @@
 @import "foundation_and_overrides";
 @import "globals/all";
 
+.site-icon {
+  height: 100%;
+  width: auto;
+}
+
 .site-footer {
   color: $aluminum;
 
