@@ -1,0 +1,46 @@
+@import "foundation_and_overrides";
+@import "globals/all";
+
+$content-padding: rem-calc(50);
+
+.content {
+  @include panel(
+    $bg: $white
+  );
+  border-radius: $global-radius;
+  margin-top: $global-vertical-spacing;
+  overflow: hidden;
+  padding: 0 $content-padding $content-padding $content-padding !important;
+
+  header {
+    background-color: $black;
+    margin-bottom: $content-padding;
+    text-transform: uppercase;
+
+    &.page-header {
+      margin-left: -$content-padding;
+      margin-right: -$content-padding;
+      margin-top: rem-calc(-3);
+    }
+
+    h1 {
+      color: $white;
+      margin-bottom: 0;
+      padding: $panel-padding;
+
+      &::after {
+        color: $primary-color;
+        content: " //";
+      }
+    }
+  }
+
+  .spacer {
+    margin-top: rem-calc(50);
+
+    &.ruled {
+      border-top: 1px dotted $iron;
+      padding-top: rem-calc(50);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<%= content_for :title, "Contact Us" %>
+<header class="page-header">
+  <h1>Contact Us</h1>
+</header>
+
+<section class="row">
+  <div class="medium-4 columns text-center">
+    <%= image_tag "logo_SummitCrest.svg", alt: "SummitCrest" %>
+  </div>
+  <div class="medium-4 columns">
+    <ul class="vcard">
+      <li class="address">
+        <span class="fn">Illinois Office</span>
+        <span class="street-address">2516 Waukegan Rd</span>
+        <span class="street-address">Suite 214</span>
+        <span class="locality">Glenview</span>
+        <span class="region">IL</span>
+        <span class="postal-code">60025</span>
+      </li>
+      <li class="phone">
+        <%= link_to "(224) 235-4474", "tel:2242354474" %>
+      </li>
+      <li class="email">
+        <%= mail_to "sales@summit-crest.com", "sales@summit-crest.com", subject: "Website Inqiry" %>
+      </li>
+    </ul>
+  </div>
+  <div class="medium-4 columns">
+    <ul class="vcard">
+      <li class="address">
+        <span class="fn">Southern California Office</span>
+        <span class="street-address">33175 Temecula Pkwy</span>
+        <span class="street-address">Suite A415</span>
+        <span class="locality">Temecula</span>
+        <span class="region">CA</span>
+        <span class="postal-code">92592</span>
+      </li>
+      <li class="phone">
+        <%= link_to "(909) 553-7782", "tel:9095537782" %>
+      </li>
+      <li class="email">
+        <%= mail_to "sales@summit-crest.com", "sales@summit-crest.com", subject: "Website Inqiry" %>
+      </li>
+    </ul>
+  </div>
+</section>

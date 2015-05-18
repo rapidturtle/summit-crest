@@ -1,0 +1,13 @@
+@import "foundation_and_overrides";
+@import "globals/all";
+
+.off-canvas-wrap,
+.inner-wrap {
+  min-height: 100%;
+}
+
+.off-canvas-wrap {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll !important;
+}

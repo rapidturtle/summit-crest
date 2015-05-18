@@ -1,0 +1,14 @@
+language: ruby
+cache: bundler
+before_script:
+  - psql -c "create database travis_ci_test;" -U postgres
+  - cp config/database.travis.yml config/database.yml
+deploy:
+  provider: opsworks
+  access_key_id: AKIAIX2XPBWY2OUEGGXA
+  secret_access_key:
+    secure: B62slB6Qi5O6ws5RSRropS6nR9LNiyPBMpyqGGi0GFvIhLg/42ZPgo/MQ0d0NcyGRHi3Tciii6C17tR7m2lmHspCT0fFB5i20yQnDvmVbh9be6g2mX5HMqrmtkPjtY60iSbjcIFh44sSveNS7zZ7TZxasfDaTa9ifG0KTiJllfQ=
+  app-id: 5881b698-3966-4287-bea4-7dc5ef186158
+  on:
+    repo: rapidturtle/com.summit-crest.www
+    branch: master

@@ -1,22 +1,7 @@
-SummitCrest::Application.routes.draw do
-  # Root
-  root to: 'home#index'
-  
-  # About
-  get '/about' => 'about#index', as: :about
-  
-  # Contact
-  get "contact" => 'contact#index', as: :contact
-  post "contact/send_message"
-  get "contact/thank_you"
-  
-  # Products
-  namespace :products do
-    root to: 'base#index'
-  end
+Rails.application.routes.draw do
+  get "/about", to: "static_pages#about"
+  get "/contact", to: "static_pages#contact"
+  get "/support", to: "static_pages#support"
 
-  # Support
-  namespace :support do
-    root to: 'base#index'
-  end
+  root to: "static_pages#home"
 end

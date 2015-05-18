@@ -1,0 +1,18 @@
+@import "foundation_and_overrides";
+@import "globals/all";
+
+.vcard {
+  display: block;
+
+  .fn {
+    font-size: 1rem;
+  }
+
+  .street-address {
+    display: block;
+  }
+
+  .locality::after {
+    content: ","
+  }
+}
